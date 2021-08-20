@@ -1,0 +1,113 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Online Responsive Resume Demo</title>
+  <meta name="author" content="Chidiogo Nwankwo">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" type="text/css"  href="{% static 'responsive.css' %}">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<div id="w" itemscope itemtype="http://schema.org/Person">
+		<header class="clearfix">
+			<div id="info">			
+				<h1><span itemprop="name">Chidiogo Nwankwo</span></h1>
+				<h3><span itemprop="jobTitle">Travel Manager &amp; Web Developer</span></h3>
+				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				  <span itemprop="addressLocality">Lekki</span>, 
+				  <span itemprop="addressRegion">Lagos</span>, 
+				  <span itemprop="addressCountry">Nigeria</span>
+				</small>
+				<small><span itemprop="email">cheeqito@gmail.com</span></small>
+				<small><a href="http://dev.to/cheediogo" itemprop="url">My Portfolio</a> &bull; <a href="http://twitter.com/cheeqito" itemprop="url">@cheeqito</a></small>
+			</div>
+			
+			<div id="photo">
+				<img src="{% static 'images/chi.jpg' %}" alt="Chidiogo Nwankwo resume photo avatar" itemprop="image" />
+			</div>
+		</header>
+		
+		<section id="profile">
+			<h2>My History &amp; Profile</h2>
+			<p itemprop="description">I am a Travel Manager and Web Developer working out of Lagos. Presently, I am interning with HNG as Backend Developer and KodeCamp as Frontend Developer. I have about 4 years experience as a travel manger.</p>
+			
+			<p>I started my journey as Web Developer in March 2021. prior to this, I had worked for about 4 years at <a href="http://www.wakanow.com/">Wakanow </a> in Lagos, Nigeria. However I left in March 2020 to pursue a career on my own. I now work as a Travel Consulting and interning as a Web Developer.</p>
+		</section>
+		
+		<section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
+			<h2 itemprop="name">Skills</h2>
+			<section id="skills-left">
+				<h4 itemprop="about">Development</h4>
+				<ul>
+					<li itemprop="itemListElement">HTML5/CSS3</li>
+					<li itemprop="itemListElement">Python Backend</li>
+				</ul>
+			</section>
+			
+			<section id="skills-right">
+				<h4 itemprop="about">Software</h4>
+				<ul>
+					<li itemprop="itemListElement">Excel</li>
+					<li itemprop="itemListElement">Amadeus</li>
+					<li itemprop="itemListElement">MS Office</li>
+				</ul>
+			</section>
+		</section>
+		
+		<section id="education">
+			<h2>Education</h2>
+			<p><span itemprop="alumniOf">Nnamdi Azikiwe University</span> Graduated with 2nd Class Upper in Bachelor's of Science, Parasitology and Entomolgy.</p>
+		</section>
+		
+		<section id="experience">
+			<h2>Work Experience</h2>
+			<p>Web Developer ~ 2021-Present</p>
+			<p>Travel Manager ~ 2016-Present</p>
+			<p>Customer Service Expert <span itemprop="worksFor=https://www.hbng.com"> </span> ~ 2015-2016</p>
+		</section>
+		
+		<section id="articles">
+			<h2>Recent Articles</h2>
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="https://www.linkedin.com/feed/update/urn:li:activity:6833303501964161024/" itemprop="url" title="Why I joined #kodecamp Program">Why I joined #kodecamp Program</a></span> &bull; Published in <span itemprop="datePublished">August 2021</span></p>
+			
+			<p itemscope itemtype="http://schema.org/Article">
+			<span itemprop="name">
+			<a href="https://dev.to/cheediogo/my-goals-for-hng-internship-4o6b" itemprop="url" title="My goals for HNG iternship">My goals for HNG iternship</a></span> &bull; Published in <span itemprop="datePublished">August 2021</span></p>
+		</section>
+        <div class="container">
+            <h2 class="text text-center text-primary mt-2">Contact Me</h2>
+            <form method="post">
+                {%csrf_token%}
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Phone</label>
+                  <input type="phone" name="phone" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <p><label class="form-check-label" for="message">Enter Your Message</label></p>
+                  <textarea  id="message" name="message" cols="100" rows="5"></textarea>
+                  
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+	</div>
+</body>
+</html>
