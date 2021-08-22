@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Online Responsive Resume Demo</title>
+  <title>My Resume</title>
   <meta name="author" content="Chidiogo Nwankwo">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
@@ -30,8 +30,8 @@
 				  <span itemprop="addressRegion">Lagos</span>, 
 				  <span itemprop="addressCountry">Nigeria</span>
 				</small>
-				<small><span itemprop="email">cheeqito@gmail.com</span></small>
-				<small><a href="http://dev.to/cheediogo" itemprop="url">My Portfolio</a> &bull; <a href="http://twitter.com/cheeqito" itemprop="url">@cheeqito</a></small>
+				<small><span itemprop="email">bkinetix@gmail.com</span></small>
+				<small><a href="https://github.com/Cheediogo" itemprop="url">My Portfolio</a> &bull; <a href="http://twitter.com/cheeqito" itemprop="url">Twitter</a></small>
 			</div>
 			
 			<div id="photo">
@@ -41,9 +41,10 @@
 		
 		<section id="profile">
 			<h2>My History &amp; Profile</h2>
-			<p itemprop="description">I am a Travel Manager and Web Developer working out of Lagos. Presently, I am interning with <a href="https://hng.tech/">HNG </a> <img src="{% static 'images/hng.png' %}" style="height: 2em; width: 10em;" alt="" /> as Backend Developer and KodeCamp as Frontend Developer. I have about 4 years experience as a travel manger.</p>
-			
-			<p>I started my journey as Web Developer in March 2021. prior to this, I had worked for about 4 years at <a href="http://www.wakanow.com/">Wakanow </a> in Lagos, Nigeria. However I left in March 2020 to pursue a career on my own. I now work as a Travel Consulting and interning as a Web Developer.</p>
+			<p itemprop="description">I am a Travel Manager and Web Developer and currently based in Lagos. Presently, I am interning with <a href="https://hng.tech/">HNG </a> <img src="{% static 'images/hng.png' %}" style="height: 2em; width: 10em;" alt="" /> as a Backend Developer and KodeCamp as Frontend Developer. I have about 4 years experience as a travel manger.</p>
+			<p>I started my journey as a Web Developer with <a href="http://zuri.team/">Zuri Team </a> <img src="{% static 'images/zuri.jpg' %}" style="height: 1.5em; width: 10em;" alt="">  about 6 months ago. Prior to this, I had worked for about 4 years at <a href="http://www.wakanow.com/">Wakanow </a> in Lagos, Nigeria. However, I left in March 2020 to pursue a career on my own. I now work as a Travel Consultant and interning as a Web Developer.</p>
+			<p>Also, I am open to knowledge and always willing to learn, continously improving my knowledge. I do believe I am a team player and have a can do attitude.</p>
+
 		</section>
 		
 		<section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
@@ -51,8 +52,9 @@
 			<section id="skills-left">
 				<h4 itemprop="about">Development</h4>
 				<ul>
-					<li itemprop="itemListElement">HTML5/CSS3</li>
-					<li itemprop="itemListElement">Python Backend</li>
+					<li itemprop="itemListElement">Python</li>
+					<li itemprop="itemListElement">HTML5/CSS</li>
+					<li itemprop="itemListElement">Django</li>
 				</ul>
 			</section>
 			
@@ -73,9 +75,9 @@
 		
 		<section id="experience">
 			<h2>Work Experience</h2>
-			<p><img src="{% static 'images/zuri.jpeg' %}" style="height: 1.5em; width: 10em;" alt=""> ~ Web Developer ~ 2021-Present</p>
+			<p>Web Developer ~ 2021-Present</p>
 			<p>Wakanow ~ Travel Manager ~ 2016-Present</p>
-			<p>Heritage Bank PLC ~ Customer Service Expert <span itemprop="worksFor=https://www.hbng.com"> </span> ~ 2015-2016</p>
+			<p>Heritage Bank PLC ~ Customer Service Expert ~ 2015-2016</p>
 		</section>
 		
 		<section id="articles">
@@ -87,9 +89,11 @@
 			<p itemscope itemtype="http://schema.org/Article">
 			<span itemprop="name">
 			<a href="https://dev.to/cheediogo/my-goals-for-hng-internship-4o6b" itemprop="url" title="My goals for HNG iternship">My goals for HNG iternship</a></span> &bull; Published in <span itemprop="datePublished">August 2021</span></p>
+		<br>
+		<hr>
 		</section>
         <div class="container">
-            <h2 class="text text-center text-primary mt-2">Contact Me</h2>
+            <h4 class="text text-center text-primary mt-2">Contact</h4>
             <form method="post">
                 {%csrf_token%}
                 <div class="mb-3">
